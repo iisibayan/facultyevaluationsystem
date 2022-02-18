@@ -1,0 +1,33 @@
+{% extends 'Home/index.html' %}
+{% block content %}
+
+
+    <div class="jumbotron text-left" class="bg-image"
+  style="
+    background-image: url('https://img.freepik.com/free-photo/white-grid-line-pattern-gray-background_53876-149707.jpg?size=626&ext=jpg');
+    height: 100vh;">
+        <h1 class="display-3"><b>SHS Faculty Evaluation</b> </h1>
+        <p class="lead">Evaluate the teaching faculty at Solano High School</p>
+{#        <hr class="my-4">#}
+        <div>
+        <p>If you are a student, click "Enter as student"</p> <br>
+
+{#        <div class="col justify-content-center">#}
+
+{#            <div class="img"></div>#}
+{#  <div class="center">#}
+{#    <div class="title">Create Amazing Website</div>#}
+{#    <div class="sub_title">Pure HTML & CSS Only</div>#}
+{#    <div class="btns">#}
+{#      <button>Learn More</button>#}
+{#      <button>Subscribe</button>#}
+{#    </div>#}
+
+        <a class="btn btn-link mr-2" role="button" href="{% url 'GetFeedbackView' %}">ENTER AS STUDENT</a><br>
+        <a class="btn btn-link mr-2" role="button" href="{% url 'LoginView' %}">ENTER AS ADMIN</a>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock content %}
