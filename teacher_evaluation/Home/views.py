@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from .models import Teacher
+from django.shortcuts import render
 
 import json
 
@@ -22,3 +23,7 @@ def get_teachers(request):
 
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
+
+def allTeachers(request):
+    teachers = Teacher.objects.all()
+    return render(request,'home/teachers.html',{'teachers':teachers})

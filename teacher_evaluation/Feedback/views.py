@@ -1,6 +1,6 @@
+from http.client import HTTPResponse
 from django.views.generic import TemplateView, CreateView
 from .models import FeedbackData
-
 
 class GetFeedbackView(CreateView):
     model = FeedbackData
